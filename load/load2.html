@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body
+        {
+            height: 100vh;
+            width: 100%;
+            background-color: black;
+
+        }
+        .container
+        {
+            /* background-color: rgb(72, 159, 235); */
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .loader
+        {
+        
+         width: 300px;
+          display: flex;
+            align-items: center;
+            justify-content: center;
+            border:2px solid rgb(7, 7, 7);
+            position: absolute;
+            animation: load 3s linear infinite;
+            z-index: -1;
+
+        }
+         .loader1
+        {
+        
+         width: 300px;
+          display: flex;
+            align-items: center;
+            justify-content: center;
+            border:2px solid rgb(7, 7, 7);
+            position: absolute;
+            animation: load1 3s linear 0s infinite;
+            z-index: -1;
+        }
+        span
+        {
+            color: white;
+            text-transform: uppercase;
+            margin-left: 10px;
+            z-index: 2;
+        }
+       @keyframes load {
+        0%{
+            border-color: red;
+            transform: rotate(360deg);
+        }
+        100%{
+            border-color: rgb(4, 206, 241);
+            transform: rotate(-360deg);
+        }
+        
+       }
+       @keyframes load1 {
+        0%{
+            border-color: rgb(0, 255, 0);
+            transform: rotate(-360deg);
+        }
+        100%{
+            border-color: rgb(247, 5, 207);
+            transform: rotate(360deg);
+        }
+        
+       }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <hr class="loader">
+        <span>Loading....</span>
+        <hr class="loader1">
+    </div>
+    
+</body>
+</html>
